@@ -27,7 +27,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		setContentView(R.layout.activity_main);
 		setupUI();
 		account.restore(this);
-		// startFriendsPageView();
 	}
 
 	private void setupUI() {
@@ -42,13 +41,6 @@ public class MainActivity extends Activity implements OnClickListener {
 	}
 
 	@Override
-	protected void onResume() {
-		// TODO Auto-generated method stub
-		super.onResume();
-		startFriendsPageView();
-	}
-
-	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (requestCode == REQUEST_LOGIN) {
 			if (resultCode == RESULT_OK) {
@@ -57,6 +49,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				account.save(MainActivity.this);
 				api = new Api(account.access_token, Constants.API_ID);
 				startMyService();
+				startFriendsPageView();
 			}
 		}
 	}
