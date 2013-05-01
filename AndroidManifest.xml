@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.root.testappvk"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application
+        android:name="com.root.testappvk.ApiClass"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Sherlock.Light" >
+        <activity
+            android:name="com.root.testappvk.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.root.testappvk.SecondActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.SECOND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+          </activity>  
+          <activity
+            android:name="com.root.testappvk.FriendViewerActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.FRIEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+          </activity> 
+          <activity
+            android:name="com.root.testappvk.PhotoGalleryActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.GALLERY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            </activity> 
+            <activity
+            android:name="com.root.testappvk.FullImageActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.FULL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+          </activity>
+          
+           <activity
+            android:name="com.root.testappvk.fragments.MyPageViewerTab"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.ViewPager" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+          </activity>
+          
+          <service
+            android:name="com.root.testappvk.friendslist.DownLoadService"
+            android:exported="false" >
+        </service>
+        
+    </application>
+
+</manifest>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TestAppVk</string>
+    <string name="action_settings">Settings</string>
+    <string name="view_all_photos_button">Посмотреть остальные фото</string>
+	<string name="login">Залогиниться</string>
+	<string name="Logout">Разлогиниться</string>
+	<string name="show_friends">Показать список друзей</string>
+	<string name="wall_post">Отправить на стену</string>
+	<string name="wall_post_hint">Сообщение на стену</string>
+	
+</resources>
